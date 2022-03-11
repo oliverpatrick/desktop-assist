@@ -9,8 +9,8 @@ import TerserPlugin from 'terser-webpack-plugin';
 import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
 import baseConfig from './webpack.config.base';
 import webpackPaths from './webpack.paths';
-import checkNodeEnv from '../scripts/check-node-env';
-import deleteSourceMaps from '../scripts/delete-source-maps';
+import checkNodeEnv from '../internals/scripts/check-node-env';
+import deleteSourceMaps from '../internals/scripts/delete-source-maps';
 
 checkNodeEnv('production');
 deleteSourceMaps();

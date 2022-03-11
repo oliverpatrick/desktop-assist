@@ -7,8 +7,8 @@ import path from 'path';
 import { merge } from 'webpack-merge';
 import baseConfig from './webpack.config.base';
 import webpackPaths from './webpack.paths';
-import { dependencies } from '../../package.json';
-import checkNodeEnv from '../scripts/check-node-env';
+import { dependencies } from '../package.json';
+import checkNodeEnv from '../internals/scripts/check-node-env';
 
 checkNodeEnv('development');
 
