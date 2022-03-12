@@ -1,5 +1,11 @@
 import React, { useEffect } from 'react';
 
+export interface ITimerProps {
+  hours: number;
+  minutes: number;
+  seconds: number;
+}
+
 let interval: NodeJS.Timeout;
 
 const TimerPause = () => {
@@ -16,10 +22,13 @@ const CounterRender = ({
   useEffect(() => {
     interval = setInterval(() => {
       if (seconds >= 0) {
+        console.log(1);
       }
       if (seconds === 59) {
+        console.log(1);
       }
       if (minutes === 59) {
+        console.log(1);
       }
     }, 1000);
     return () => {
