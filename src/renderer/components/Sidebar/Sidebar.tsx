@@ -1,15 +1,15 @@
 import React from 'react';
-import {
-  ChartBarIcon,
-  CalendarIcon,
-  ClockIcon,
-  LoginIcon,
-  CogIcon,
-  LinkIcon,
-  PencilAltIcon,
-} from '@heroicons/react/outline';
-
 import moment from 'moment';
+
+import ChartIcon from '../../../../assets/svg/chart.svg';
+import CalendarIcon from '../../../../assets/svg/calendar.svg';
+import ClockIcon from '../../../../assets/svg/clock.svg';
+import LoginIcon from '../../../../assets/svg/login.svg';
+import CogIcon from '../../../../assets/svg/cog.svg';
+import LinkIcon from '../../../../assets/svg/link.svg';
+import PencilAltIcon from '../../../../assets/svg/pencilAlt.svg';
+import ClipboardCheckIcon from '../../../../assets/svg/clipboardCheck.svg';
+
 import SidebarItem from './SidebarItem';
 
 function Sidebar(): JSX.Element {
@@ -31,22 +31,26 @@ function Sidebar(): JSX.Element {
       <div className="h-[calc(100%-4rem)] flex flex-col justify-between">
         <div className="mt-5">
           <ul>
-            <SidebarItem route="/" page="Home" icon={<ChartBarIcon />} />
-            <SidebarItem route="/timer" page="Timer" icon={<ClockIcon />} />
-            <SidebarItem route="/notes" page="Notes" icon={<PencilAltIcon />} />
-            <SidebarItem route="/links" page="Links" icon={<LinkIcon />} />
+            <SidebarItem route="/" page="Home" icon={ChartIcon} />
+            <SidebarItem route="/timer" page="Timer" icon={ClockIcon} />
+            <SidebarItem
+              route="/todos"
+              page="Todos"
+              icon={ClipboardCheckIcon}
+            />
+            <SidebarItem route="/notes" page="Notes" icon={PencilAltIcon} />
+            <SidebarItem route="/links" page="Links" icon={LinkIcon} />
             <SidebarItem
               route="/calender"
               page="Calendar"
-              icon={<CalendarIcon />}
+              icon={CalendarIcon}
             />
           </ul>
         </div>
 
         <div className="border-t pt-2 pb-2">
-          <SidebarItem route="/logout" page="Logout" icon={<LoginIcon />} />
-
-          <SidebarItem route="/settings" page="Settings" icon={<CogIcon />} />
+          <SidebarItem route="/logout" page="Logout" icon={LoginIcon} />
+          <SidebarItem route="/settings" page="Settings" icon={CogIcon} />
         </div>
       </div>
     </nav>
